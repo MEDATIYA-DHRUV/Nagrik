@@ -12,8 +12,8 @@ body, html {
 }
 
 .left-section {
-  flex: 1;
-  background-color: #0066FF;
+  width: 40%;
+  background-color: white;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -22,6 +22,7 @@ body, html {
 .left-section img {
   width: 80%;
   max-width: 500px;
+  border-radius: 25px;
 
 }
 
@@ -83,6 +84,11 @@ input[type="password"] {
   color: #212529;
   font-size: 14px;
 }
+.tagstyle{
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+}
 
 .login-button {
   padding: 10px;
@@ -93,6 +99,7 @@ input[type="password"] {
   font-size: 16px;
   cursor: pointer;
   margin-bottom: 20px;
+  Display: block;
 }
 
 .login-button:hover {
@@ -102,7 +109,7 @@ input[type="password"] {
 a {
   text-decoration: none;
   color: #0066FF;
-  font-size: 14px;
+  font-size: 16px;
 }
 .password-wrapper {
   position: relative;

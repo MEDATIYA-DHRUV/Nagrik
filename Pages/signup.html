@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up Page</title>
+  <link rel="stylesheet" href="../css/signup.css">
+  <link rel="icon" href="/logo.svg">
+</head>
+<body>
+<div class="container">
+  <div class="left-section">
+    <img src="/img/law2.png" alt="Justice Scales, Gavel, and Briefcase">
+  </div>
+  <div class="right-section">
+    <a href="index.html" class="back-link">&larr; Back</a>
+    <h2>Account Registration</h2>
+    <p>Become a Member of “Nagrik Aur Samvidhan” and get the constitution at your fingertips</p>
+    <form>
+      <label for="full-name">Full Name (As per Aadhar Card)</label>
+      <input type="text" id="full-name" name="full-name">
+
+      <label for="mobile">Mobile No.</label>
+      <input type="text" id="mobile" name="mobile">
+
+      <label for="city">City</label>
+      <input type="text" id="city" name="city">
+
+      <label for="password">Password</label>
+      <div class="password-wrapper">
+        <input type="password" id="password" name="password">
+        <img src="/img/eye.svg" alt="View Password" class="toggle-password" id="toggle-password">
+      </div>
+
+      <label for="confirm-password">Confirm Password</label>
+      <div class="password-wrapper">
+        <input type="password" id="confirm-password" name="confirm-password">
+        <img src="/img/eye.svg" alt="View Password" class="toggle-password" id="toggle-confirm-password">
+      </div>
+
+      <button type="button" class="signup-button"><a href="otpverify.html">Next</a></button>
+    </form>
+  </div>
+</div>
+
+<script>
+  // Toggle password visibility for password field
+  document.getElementById('toggle-password').addEventListener('click', function () {
+    const passwordField = document.getElementById('password');
+    const togglePasswordIcon = document.getElementById('toggle-password');
+
+    if (passwordField.type === 'password') {
+      passwordField.type = 'text';
+      togglePasswordIcon.src = '/img/eyeslash.svg';  // Update this to the "eye-slash" icon
+    } else {
+      passwordField.type = 'password';
+      togglePasswordIcon.src = '/img/eye.svg';  // Update this to the "eye" icon
+    }
+  });
+
+  // Toggle password visibility for confirm password field
+  document.getElementById('toggle-confirm-password').addEventListener('click', function () {
+    const confirmPasswordField = document.getElementById('confirm-password');
+    const toggleConfirmPasswordIcon = document.getElementById('toggle-confirm-password');
+
+    if (confirmPasswordField.type === 'password') {
+      confirmPasswordField.type = 'text';
+      toggleConfirmPasswordIcon.src = '/img/eyeslash.svg';  // Update this to the "eye-slash" icon
+    } else {
+      confirmPasswordField.type = 'password';
+      toggleConfirmPasswordIcon.src = '/img/eye.svg';  // Update this to the "eye" icon
+    }
+  });
+
+</script> <!-- Link to the JS file -->
+</body>
+</html>
