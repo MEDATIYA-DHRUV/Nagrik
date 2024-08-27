@@ -70,6 +70,10 @@ body {
 .profile-img {
   width: 45px;
 }
+.profile-img2 {
+  width: 45px;
+  border-radius: 50%;
+}
 .li {
   padding-top: 15px;
   padding-right: 20px;

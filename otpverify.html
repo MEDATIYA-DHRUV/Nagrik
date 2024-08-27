@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>otp verify</title>
-  <link rel="stylesheet" href="../css/otp.css">
+  <link rel="stylesheet" href="css/otp.css">
   <link rel="icon" href="/logo.svg">
 </head>
 <body>
@@ -77,7 +77,7 @@
         if (otp === validOTP) {
           alert("Login successful!");
           // Redirect to the authenticated page or dashboard
-          window.location.href = "index.html";
+          window.location.href = "dashboard.html";
         } else {
           // Show OTP error message
           otpErrorMessage.style.display = "block";
