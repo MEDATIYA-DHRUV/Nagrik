@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login Page</title>
-  <link rel="stylesheet" href="../css/login.css">
+  <link rel="stylesheet" href="/css/login.css">
   <link rel="icon" href="/logo.svg">
 </head>
 <body>
@@ -16,7 +16,7 @@
     <a href="index.html" class="back-link">&larr; Back</a>
     <h2>Account Login</h2>
     <p>If you are already registered you can login with your email address and password.</p>
-    <form>
+    <form id="login-form">
       <label for="phone">Phone No.</label>
       <input type="text" id="phone" name="phone">
 
@@ -30,28 +30,40 @@
         <input type="checkbox" id="remember-me" name="remember-me">
         <label for="remember-me">Remember me</label>
       </div>
-
       <button type="submit" class="login-button"><a href="index.html" class="tagstyle">Login</a></button>
     </form>
+    <div id="error-message">Invalid phone number or password, please try again.</div>
     <p>Don’t have an account? <a href="signup.html">Register here</a></p>
   </div>
 </div>
 
 <script>
-  document.getElementById('toggle-password').addEventListener('click', function () {
-    const passwordField = document.getElementById('password');
-    const togglePasswordIcon = document.getElementById('toggle-password');
+  const validPhoneNumber = "9876543210";  // Replace with your actual valid phone number
+  const validPassword = "quantamcoders";  // Replace with your actual password
 
-    // Toggle the type attribute
-    if (passwordField.type === 'password') {
-      passwordField.type = 'text';
-      togglePasswordIcon.src = '/img/eyeslash.svg';  // Change to a different icon to indicate hidden password
+  // Login form submission handler
+  document.getElementById('login-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    // Hide the error message initially
+    const errorMessage = document.getElementById('error-message');
+    errorMessage.style.display = "none";
+
+    // Get user input values
+    const phoneNumber = document.getElementById('phone').value;
+    const password = document.getElementById('password').value;
+
+    // Validate the inputs
+    if (phoneNumber === validPhoneNumber && password === validPassword) {
+      alert("Login successful!");
+      // Redirect to the authenticated page or dashboard
+      window.location.href = "index.html";
     } else {
-      passwordField.type = 'password';
-      togglePasswordIcon.src = '/img/eye.svg';  // Change back to the original icon
+      // Show error message
+      errorMessage.style.display = "block";
     }
   });
 
-</script> <!-- Link to the JS file -->
+</script>
 </body>
 </html>

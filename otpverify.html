@@ -8,31 +8,93 @@
   <link rel="icon" href="/logo.svg">
 </head>
 <body>
+<!-- Aadhar Number Verification -->
 <div class="container">
   <div class="left-section">
     <img src="/img/law3.png" alt="justice-scales-final">
   </div>
   <div class="right-section">
     <a href="signup.html" class="back-link">&larr; Back</a>
-    <h2>Aadhar Verification</h2>
-    <p>Enter your correct Aadhar Card details</p>
-    <div>
-    <form>
-      <label>Aadhar Card No.</label>
-      <input type="text" id="aadharcard-number" name="aadhar-number">
-    </form>
-    <button type="button" class="signup-button" onclick="">Get OTP</button>
-    </div>
-    <div class="container2" id="dvi2">
-      <form>
-      <label>Enter the OTP sent to your registered mobile no.</label>
-      <input type="text" id="otp" name="otp">
-      </form>
-      <button type="submit" class="signup-button"><a href="login.html" >Submit</a></button>
-    </div>
+<div id="aadhar-section">
+  <h2>Aadhar Verification</h2>
+  <form id="aadhar-form">
+    <input type="text" id="aadhar-number" placeholder="Enter your Aadhar Number" required>
+    <button type="submit" class="signup-button">Verify Aadhar</button>
+  </form>
+  <div id="aadhar-error-message">Invalid Aadhar number, please try again.</div>
+</div>
 
+<!-- OTP Verification -->
+<div id="otp-section">
+  <h2>OTP Verification</h2>
+  <form id="otp-form">
+    <input type="text" id="otp" placeholder="Enter OTP" required>
+    <button type="submit" class="signup-button">Verify OTP</button>
+  </form>
+  <div id="otp-error-message">Invalid OTP, please try again.</div>
+  <a id="edit-aadhar-link" class="tagstyle2">Edit Aadhar Number</a>
+</div>
+
+    <script>
+      // Define the valid Aadhar number and OTP
+      const validAadharNumber = "123456789";  // Replace with your actual valid Aadhar number
+      const validOTP = "123456";  // Replace with your actual OTP
+
+      // Store the Aadhar number in a variable to allow editing
+      let storedAadharNumber = "";
+
+      // Aadhar verification form
+      document.getElementById('aadhar-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        // Hide the error message initially
+        const aadharErrorMessage = document.getElementById('aadhar-error-message');
+        aadharErrorMessage.style.display = "none";
+
+        const aadharNumber = document.getElementById('aadhar-number').value;
+        storedAadharNumber = aadharNumber; // Store the Aadhar number for later use
+
+        if (aadharNumber === validAadharNumber) {
+          // Hide Aadhar section and show OTP section
+          document.getElementById('aadhar-section').style.display = "none";
+          document.getElementById('otp-section').style.display = "block";
+        } else {
+          // Show Aadhar error message
+          aadharErrorMessage.style.display = "block";
+        }
+      });
+
+      // OTP verification form
+      document.getElementById('otp-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        // Hide the error message initially
+        const otpErrorMessage = document.getElementById('otp-error-message');
+        otpErrorMessage.style.display = "none";
+
+        const otp = document.getElementById('otp').value;
+
+        if (otp === validOTP) {
+          alert("Login successful!");
+          // Redirect to the authenticated page or dashboard
+          window.location.href = "index.html";
+        } else {
+          // Show OTP error message
+          otpErrorMessage.style.display = "block";
+        }
+      });
+
+      // Edit Aadhar number link
+      document.getElementById('edit-aadhar-link').addEventListener('click', function() {
+        // Show Aadhar section and hide OTP section
+        document.getElementById('aadhar-section').style.display = "block";
+        document.getElementById('otp-section').style.display = "none";
+
+        // Pre-fill the stored Aadhar number in the input field
+        document.getElementById('aadhar-number').value = storedAadharNumber;
+      });
+</script>
   </div>
 </div>
-<script src="../js/otp.js"></script>
 </body>
 </html>
