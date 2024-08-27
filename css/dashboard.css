@@ -49,6 +49,7 @@ body {
     align-self: center;
     width: 1200px;
     height: 100px;
+    padding-bottom: 20px;
 }
 
 .banner-left img, .banner-right img {
