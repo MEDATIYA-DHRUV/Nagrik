@@ -8,19 +8,80 @@
 </head>
 <body>
 <nav class="navbar">
-    <div class="navbar-logo">
+    <a href="#"> <div class="navbar-logo" onclick="navigateToPage('home.html')">
         <img src="/img/logo.svg" alt="Logo">
         <span>Nagrik Aur Samvidhan</span>
-    </div>
+    </div></a>
     <ul class="navbar-menu">
-        <li class="li"><a href="index.html">Home</a></li>
-        <li class="li"><a href="aboutus.html">About Us</a></li>
-        <li class="li"><a href="learn.html">Learn</a></li>
+        <li class="hover-underline-animation"><a href="home.html">Menu</a></li>
+        <li class="hover-underline-animation"><a href="aboutus.html">About NAS</a></li>
+        <li class="hover-underline-animation"><a href="news.html">News</a></li>
         <div >
-            <a href="dashboard.html" class="btn-login"><img src="img/hetu.jpg" class="profile-img2"></a>
+            <a href="dashboard.html" ><img src="img/hetu.jpg" class="profile-img2"></a>
         </div>
     </ul>
-
 </nav>
+
+<div class="logo-box">
+    <div class="logo-container">
+       <a href="#"> <div class="logo-item" onclick="navigateToPage('learn.html')">
+            <img src="img/learn.svg" alt="Logo 1">
+            <p>Learn</p>
+        </div></a>
+        <a href="#"><div class="logo-item" onclick="navigateToPage('community.html')">
+            <img src="img/community.svg" alt="Logo 2">
+            <p>Community</p>
+        </div></a>
+      <a href="#">  <div class="logo-item" onclick="navigateToPage('achievement.html')">
+            <img src="img/achieve.svg" alt="Logo 3">
+            <p>Achievement</p>
+        </div></a>
+        <a href="#"><div class="logo-item" onclick="navigateToPage('news.html')">
+            <img src="img/news.svg" alt="Logo 4">
+            <p>News & Updates</p>
+        </div></a>
+    </div>
+</div>
+
+
+
+
+<div class="slideshow-container">
+
+    <!-- Full-width images with number and caption text -->
+    <div class="mySlides fade">
+
+        <img src="img/cara1.svg" style="width:100%" alt="cara1">
+    </div>
+
+    <div class="mySlides fade">
+
+        <img src="img/cara2.svg" style="width:100%" alt="cara2">
+    </div>
+
+    <div class="mySlides fade">
+
+        <img src="img/cara3.svg" style="width:100%" alt="cara3">
+    </div>
+
+    <div class="mySlides fade">
+
+        <img src="img/cara4.svg" style="width:100%" alt="cara4">
+    </div>
+
+    <!-- Next and previous buttons -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<!-- The dots/circles -->
+<div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
+</div>
+<script src="home.js"></script>
 </body>
 </html>

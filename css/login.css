@@ -129,6 +129,8 @@ a {
   cursor: pointer;
   width: 20px;  /* Adjust based on your image size */
   height: 20px; /* Adjust based on your image size */
+  padding-right: 15px;
+  padding-bottom: 5px;
 }
 #error-message {
   display: none;

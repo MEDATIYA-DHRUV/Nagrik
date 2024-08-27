@@ -64,6 +64,19 @@
     }
   });
 
+  document.getElementById('toggle-password').addEventListener('click', function () {
+    const passwordField = document.getElementById('password');
+    const togglePasswordIcon = document.getElementById('toggle-password');
+
+    if (passwordField.type === 'password') {
+      passwordField.type = 'text';
+      togglePasswordIcon.src = '/img/eyeslash.svg';  // Update this to the "eye-slash" icon
+    } else {
+      passwordField.type = 'password';
+      togglePasswordIcon.src = '/img/eye.svg';  // Update this to the "eye" icon
+    }
+  });
+
 </script>
 </body>
 </html>
