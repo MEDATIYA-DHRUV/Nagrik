@@ -55,9 +55,9 @@
 
     // Validate the inputs
     if (phoneNumber === validPhoneNumber && password === validPassword) {
-      alert("Login successful!");
+      alert("Login Successful.....")
       // Redirect to the authenticated page or dashboard
-      window.location.href = "home.html";
+      navigateToPage('home.html');
     } else {
       // Show error message
       errorMessage.style.display = "block";
@@ -76,6 +76,9 @@
       togglePasswordIcon.src = '/img/eye.svg';  // Update this to the "eye" icon
     }
   });
+  function navigateToPage(page) {
+    window.location.href = page;
+  }
 
 </script>
 </body>
