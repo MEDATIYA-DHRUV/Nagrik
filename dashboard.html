@@ -22,9 +22,9 @@
         </div>
     </header>
 
-    <div class="banner">
+    <a href="#"> <div class="banner" onclick="navigateToPage('home.html')">
        <img src="img/banner.svg" alt="top-banner" class="bannerimg">
-    </div>
+    </div></a>
 
     <div class="profile-section">
         <div class="profile-info">
@@ -78,5 +78,10 @@
     </div>
 </div>
 </div>
+<script>
+    function navigateToPage(page) {
+        window.location.href = page;
+    }
+</script>
 </body>
 </html>

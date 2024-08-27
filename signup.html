@@ -38,7 +38,7 @@
         <img src="/img/eye.svg" alt="View Password" class="toggle-password" id="toggle-confirm-password">
       </div>
 
-      <button type="button" class="signup-button"><a href="otpverify.html">Next</a></button>
+      <a href="#" style="text-decoration: none"><button type="button" class="signup-button" onclick="navigateToPage('otpverify.html')">Next</button></a>
     </form>
   </div>
 </div>
@@ -71,7 +71,9 @@
       toggleConfirmPasswordIcon.src = '/img/eye.svg';  // Update this to the "eye" icon
     }
   });
-
+  function navigateToPage(page) {
+    window.location.href = page;
+  }
 </script> <!-- Link to the JS file -->
 </body>
 </html>
