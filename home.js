@@ -46,3 +46,30 @@ slideInterval = setInterval(autoShowSlides, 5000); // Change image every 3 secon
 function navigateToPage(page) {
     window.location.href = page;
 }
+
+const navButton = document.getElementById('navButton');
+const hoverMenu = document.getElementById('hoverMenu');
+
+navButton.addEventListener('mouseenter', function() {
+    const rect = navButton.getBoundingClientRect();
+
+    // Position the menu
+    hoverMenu.style.top = rect.bottom + 'px';
+    hoverMenu.style.left = '50%'; // Set to 50% of the viewport width
+    hoverMenu.style.transform = `translateX(-50%)`; // Center it by shifting it left by 50% of its own width
+
+    hoverMenu.style.display = 'flex';
+});
+
+navButton.addEventListener('mouseleave', function() {
+    setTimeout(function() {
+        if (!hoverMenu.matches(':hover')) {
+            hoverMenu.style.display = 'none';
+        }
+    }, 200);
+});
+
+hoverMenu.addEventListener('mouseleave', function() {
+    hoverMenu.style.display = 'none';
+});
+

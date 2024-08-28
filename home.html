@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>Nagrik aur Samvidhan</title>
@@ -13,14 +13,83 @@
         <span>Nagrik Aur Samvidhan</span>
     </div></a>
     <ul class="navbar-menu">
-        <li class="hover-underline-animation"><a href="home.html">Menu</a></li>
+        <li class="hover-underline-animation"><a href="home.html" id="navButton">Menu</a></li>
         <li class="hover-underline-animation"><a href="aboutus.html">About NAS</a></li>
         <li class="hover-underline-animation"><a href="news.html">News</a></li>
         <div >
-            <a href="dashboard.html" ><img src="img/hetu.jpg" class="profile-img2"></a>
+            <a href="dashboard.html" ><img src="img/hetu.jpg" class="profile-img2" alt="prof"></a>
         </div>
     </ul>
 </nav>
+<div class="hover-menu" id="hoverMenu">
+    <div class="menu-section learn-section">
+        <h3>LEARN</h3>
+        <ul>
+           <li onclick="navigateToPage('community.html')" >
+               <a href="#"></a>
+                <img src="img/menu-icon1.svg" class="icon" alt="icon1">
+                <div>
+                    <strong>Community</strong>
+                    <span>Integrate with Community</span>
+                </div>
+            </li>
+            <li onclick="navigateToPage('learn.html')">
+                <img src="img/menu-icon2.svg" class="icon">
+                <div>
+                    <strong>Learning Modules</strong>
+                    <span>All about how to use</span>
+                </div>
+            </li>
+            <li onclick="navigateToPage('learn.html')">
+                <img src="img/menu-icon3.svg" class="icon">
+                <div>
+                    <strong>Learn with fun</strong>
+                    <span>Deep dive into Learning</span>
+                </div>
+            </li>
+            <li onclick="navigateToPage('aboutus.html')">
+                <img src="img/menu-icon4.svg" class="icon">
+                <div>
+                    <strong>Help Center</strong>
+                    <span>Questions and tips from others</span>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="menu-section real-latest-section">
+        <h3>REAL & LATEST</h3>
+        <ul>
+            <li onclick="navigateToPage('constitution.html')">
+                <img src="img/menu-icon21.svg" class="icon">
+                <div>
+                    <strong>The Constitution</strong>
+                    <span>Get the constitution</span>
+                </div>
+            </li>
+            <li onclick="navigateToPage('casestudy.html')">
+                <img src="img/menu-icon22.svg" class="icon">
+                <div>
+                    <strong>Case Studies</strong>
+                    <span>Get Real-time Case studies</span>
+                </div>
+            </li>
+            <li onclick="navigateToPage('expert session.html')">
+                <img src="img/menu-icon23.svg" class="icon">
+                <div>
+                    <strong>Expert Session</strong>
+                    <span>Get hands on expert sessions</span>
+                </div>
+            </li>
+            <li onclick="navigateToPage('updates.html')">
+                <img src="img/menu-icon24.svg" class="icon">
+                <div>
+                    <strong>Latest Updates of Laws</strong>
+                    <span>Discover what's the new rules</span>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
 
 <div class="logo-box">
     <div class="logo-container">
@@ -82,6 +151,50 @@
     <span class="dot" onclick="currentSlide(3)"></span>
     <span class="dot" onclick="currentSlide(4)"></span>
 </div>
+<footer>
+    <div class="footer-container">
+        <div class="footer-columns">
+            <div class="footer-column">
+                <h4>About Us</h4>
+                <ul>
+                    <li class="footer-text"><a href="aboutus.html">Our Mission</a></li>
+                    <li class="footer-text"><a href="aboutus.html">Our Team</a></li>
+                    <li class="footer-text"><a href="aboutus.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li class="footer-text"><a href="learn.html">Learn</a></li>
+                    <li class="footer-text"><a href="community.html">Community</a></li>
+                    <li class="footer-text"><a href="news.html">News & Updates</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Stay Connected</h4>
+                <ul>
+                    <li><a href="#" class="social-link"><i class="footer-text"></i> Facebook</a></li>
+                    <li><a href="#" class="social-link"><i class="footer-text"></i> Twitter</a></li>
+                    <li><a href="#" class="social-link"><i class="footer-text"></i> Instagram</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Subscribe to Our Newsletter</h4>
+                <form>
+                    <input type="text" placeholder="Enter your email address">
+                    <button type="submit" class="signup-button">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 Nagrik Aur Samvidhan. All rights reserved.</p>
+        <ul>
+            <li><a href="terms.html">Terms of Use</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+        </ul>
+    </div>
+</footer>
 <script src="home.js"></script>
 </body>
 </html>

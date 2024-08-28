@@ -8,80 +8,100 @@
     <link rel="icon" href="/logo.svg">
 </head>
 <body>
-<div class="primarycon">
-<div class="container">
-    <header class="header">
-        <div class="header-left">
-            <h1>Welcome, Het Rathod</h1>
-            <p class="date">Fri, 30 Aug 2024</p>
-        </div>
-        <div class="header-right">
-            <div class="profile-pic">
-                <a href="home.html"> <img src="img/hetu.jpg" alt="User Profile"></a>
-            </div>
-        </div>
-    </header>
-
-    <a href="#"> <div class="banner" onclick="navigateToPage('home.html')">
-       <img src="img/banner.svg" alt="top-banner" class="bannerimg">
-    </div></a>
-
-    <div class="profile-section">
-        <div class="profile-info">
-            <img src="img/hetu.jpg" alt="Alexa Rawles" class="avatar">
-            <div class="user-details">
-                <h3>Ridham Rathod</h3>
-                <p>RidhamRathod@gmail.com</p>
-            </div>
-            <button class="edit-button">Edit</button>
-        </div>
-    </div>
-
-    <div class="form-section">
-        <form>
-            <div class="form-group">
-                <label for="full-name">Full Name</label>
-                <input type="text" id="full-name" VALUE="Ridham Shankarsingh Rathod" placeholder="Your First Name">
-            </div>
-            <div class="form-group">
-                <label for="nick-name">Nick Name</label>
-                <input type="text" id="nick-name" VALUE="Ridham" placeholder="Your First Name" disabled>
-            </div>
-            <div class="form-group">
-                <label for="gender">Gender</label>
-                <input type="text" id="gender" value="Male" placeholder="Your First Name" disabled>
-            </div>
-            <div class="form-group">
-                <label for="country">Country</label>
-                <input type="text" id="country" value="INDIA" placeholder="Your First Name" disabled>
-            </div>
-            <div class="form-group">
-                <label for="language">Language</label>
-                <input type="text" id="language" value="English" placeholder="Your First Name" disabled>
-            </div>
-            <div class="form-group">
-                <label for="time-zone">Phone No.</label>
-                <input type="text" id="time-zone" value="9265558560" placeholder="Your Phone no" disabled>
-            </div>
-        </form>
-"
-    </div>
-
-    <div class="email-section">
-        <h4>My email Address</h4>
-        <div class="email-details">
-            <input type="radio" checked>
-            <label>JethalalGada@gmail.com</label>
-            <span>1 month ago</span>
-        </div>
-        <button class="add-email-button">+ Add Email Address</button>
-    </div>
+<div class="sidebar">
+    <a href="dashboard.html">
+        <img src="img/homeicon.svg" alt="Dashboard">
+    </a>
+    <a href="analytics.html">
+        <img src="img/analyticsicon.svg" alt="Analytics">
+    </a>
+    <a href="settings.html">
+        <img src="img/settingsicon.svg" alt="Settings">
+    </a>
+    <a href="index.html">
+        <img src="img/logout.svg" alt="logout">
+    </a>
 </div>
+
+<div class="primarycon">
+    <div class="container">
+        <header class="header">
+            <div class="header-left">
+                <h1>Welcome, Ridham Rathod</h1>
+                <p class="date">Fri, 30 Aug 2024</p>
+            </div>
+            <div class="header-right">
+                <div class="profile-pic">
+                    <a href="home.html"> <img src="img/hetu.jpg" alt="User Profile"></a>
+                </div>
+            </div>
+        </header>
+
+        <a href="#">
+            <div class="banner" onclick="navigateToPage('home.html')">
+                <img src="img/banner.svg" alt="top-banner" class="bannerimg">
+            </div>
+        </a>
+
+        <div class="left-div">
+            <div class="profile-section">
+                <div class="profile-info">
+                    <img src="img/hetu.jpg" alt="Alexa Rawles" class="avatar">
+                    <div class="user-details">
+                        <h3>Ridham Rathod</h3>
+                        <p>RidhamRathod@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <form id="infoForm" action="#">
+                    <div class="form-group">
+                        <label for="full-name">Full Name</label>
+                        <input type="text" id="full-name" name="full-name" VALUE="Ridham Shankarsingh Rathod" disabled>
+                    </div>
+                    <div class="form-group">
+                        <label for="nick-name">Nick Name</label>
+                        <input type="text" id="nick-name" name="nick-name" VALUE="Ridham" disabled>
+                    </div>
+                    <div class="form-group">
+                        <label for="gender">Gender</label>
+                        <input type="text" id="gender" value="Male" placeholder="Your First Name" disabled>
+                    </div>
+                    <div class="form-group">
+                        <label for="country">Country</label>
+                        <input type="text" id="country" value="INDIA" placeholder="Your First Name" disabled>
+                    </div>
+                    <div class="form-group">
+                        <label for="language">Language</label>
+                        <input type="text" id="language" value="English" placeholder="Your First Name" disabled>
+                    </div>
+                    <div class="form-group">
+                        <label for="time-zone">Phone No.</label>
+                        <input type="text" id="time-zone" value="9265558560" placeholder="Your Phone no" disabled>
+                    </div>
+                    <button type="button" class="edit-button" id="editButton">Edit</button>
+                    <button type="submit" class="edit-button" id="saveButton" style="display: none">Save</button>
+                </form>
+            </div>
+
+            <div class="email-section">
+                <h4>My email Address</h4>
+                <div class="email-details">
+                    <input type="radio" checked>
+                    <label>RidhamRathod@gmail.com</label>
+                    <span>1 month ago</span>
+                </div>
+                <button class="add-email-button" onclick="navigateToPage('index.html')">Log Out</button>
+            </div>
+        </div>
+    </div>
 </div>
 <script>
     function navigateToPage(page) {
         window.location.href = page;
     }
+
 </script>
 </body>
 </html>
