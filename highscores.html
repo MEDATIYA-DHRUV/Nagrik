@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>High Scores</title>
+    <link rel="icon" href="/logo.svg">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/highscores.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css" integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q" crossorigin="anonymous">
@@ -98,10 +99,13 @@
 </div>
     <div class="container">
         <div id="highScores" class="flex-center flex-column">
-            <h1 id="finalScore">Leaderboard</h1>
+            <h1 id="finalScore" class="leaderboard">Leaderboard</h1>
             <ul id="highScoresList"></ul>
+            <div>
             <img  class="scoreimg" src="img/scoreboard.png">
-            <a  class="btn">Go Home<i class="fas fa-home"></i></a>
+                <img src="img/toppart2.svg" alt="top3" class="scoreimg">
+            </div>
+            <button class="signup-button" onclick="navigateToPage('home.html')">Go Home<i class="fas fa-home"></i></button>
         </div>
     </div>
     <footer>
@@ -148,6 +152,35 @@
             </ul>
         </div>
     </footer>
-    <script ></script>
+    <script >
+            const navButton = document.getElementById('navButton');
+            const hoverMenu = document.getElementById('hoverMenu');
+
+            navButton.addEventListener('mouseenter', function() {
+            const rect = navButton.getBoundingClientRect();
+
+            // Position the menu
+            hoverMenu.style.top = rect.bottom + 'px';
+            hoverMenu.style.left = '60%'; // Set to 50% of the viewport width
+            hoverMenu.style.transform = `translateX(-50%)`; // Center it by shifting it left by 50% of its own width
+
+            hoverMenu.style.display = 'flex';
+        });
+
+            navButton.addEventListener('mouseleave', function() {
+            setTimeout(function() {
+                if (!hoverMenu.matches(':hover')) {
+                    hoverMenu.style.display = 'none';
+                }
+            }, 200);
+        });
+
+            hoverMenu.addEventListener('mouseleave', function() {
+            hoverMenu.style.display = 'none';
+        });
+            function navigateToPage(page) {
+                window.location.href = page;
+            }
+    </script>
 </body>
 </html>
