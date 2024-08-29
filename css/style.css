@@ -511,10 +511,10 @@ input[type="text"], input[type="password"] {
 }
 
 h2 {
-  padding-left: 50px;
+  margin-left: 5px;
   font-size: 32px;
   font-weight: bolder;
   margin-bottom: 0;
-  color: #0229BF;
+  color: #555555;
 
 }

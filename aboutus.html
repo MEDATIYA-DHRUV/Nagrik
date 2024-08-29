@@ -6,6 +6,8 @@
     <link rel="icon" href="/logo.svg">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/aboutus.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </head>
 <body>
 <div class="top-bar">
@@ -97,8 +99,74 @@
 </div>
 <div>
     <img src="img/aboutuscard1.svg" class="aboutcard">
-    <img src="img/aboutuscard2.svg" class="aboutcard">
 </div>
+
+<div class="team-section">
+    <h2>Our Team</h2>
+    <p>THE TEAM WHO MADE THE "NAGRIK AUR SAMVIDHAN" POSSIBLE</p>
+
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <!-- Team Member 1 -->
+            <div class="swiper-slide">
+                <div class="team-card">
+                    <img src="img/krinal.jpg" alt="Team Member 1">
+                    <h3>KRINAL SATASIYA</h3>Team Leader
+                    <p>Team Leader who with her leading skilland team management mad eall things possible</p>
+                </div>
+            </div>
+
+            <!-- Team Member 2 -->
+            <div class="swiper-slide">
+                <div class="team-card">
+                    <img src="img/maratha.jpg" alt="Team Member 2">
+                    <h3>DHRUV MARATHA</h3>Co-Leader
+                    <p>A creative coder who developed innovative solutions and interactive elements..</p>
+                </div>
+            </div>
+
+            <!-- Team Member 3 -->
+            <div class="swiper-slide">
+                <div class="team-card">
+                    <img src="img/dhruv.png" alt="Team Member 3">
+                    <h3>DHRUV MEDATIYA</h3>Team-Member
+                    <p>A skilled programmer who brought our vision to life with clean, efficient code.</p>
+                </div>
+            </div>
+
+            <!-- Team Member 4 -->
+            <div class="swiper-slide">
+                <div class="team-card">
+                    <img src="img/rathod.jpg" alt="Team Member 4">
+                    <h3>HET RATHOD</h3>Team-Member
+                    <p>A project manager who ensured that the PPT development process ran smoothly and met all deadlines.</p>
+                </div>
+            </div>
+
+            <!-- Team Member 5 -->
+            <div class="swiper-slide">
+                <div class="team-card">
+                    <img src="img/vedant.jpg" alt="Team Member 5">
+                    <h3>VEDANT RATHOD</h3>Team-Member
+                    <p>A dedicated researcher who unearthed fascinating facts and stories about the Indian Constitution.</p>
+                </div>
+            </div>
+
+            <!-- Team Member 6 -->
+            <div class="swiper-slide">
+                <div class="team-card">
+                    <img src="img/vidhi.jpg" alt="Team Member 6">
+                    <h3>VIDHI SHAH</h3>Team-Member
+                    <p>A passionate writer who crafted engaging and informative content that resonates with our audience.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+    </div>
+</div>
+
 
 
 <footer>
@@ -168,9 +236,33 @@
         }, 200);
     });
 
-    hoverMenu.addEventListener('mouseleave', function() {
-        hoverMenu.style.display = 'none';
+    var swiper = new Swiper('.swiper-container', {
+        slidesPerView: 3, // Display 3 slides at a time on large screens
+        spaceBetween: 30,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        grabCursor: true,
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        },
+        breakpoints: {
+            1024: {
+                slidesPerView: 3, // 3 slides for tablets and up
+            },
+            768: {
+                slidesPerView: 2, // 2 slides for mobile
+            },
+            640: {
+                slidesPerView: 1, // 1 slide for smaller mobile screens
+            },
+        }
     });
+
+
+
 </script>
 </body>
 </html>
