@@ -141,7 +141,9 @@ const quizEnd = () => {
   document.getElementsByClassName("container")[0].innerHTML = `
         <div class="col">
             <h3 class="w-100"> Hii, you've scored ${correct} / ${total} </h3>
+            <button class="btn btn-primary" onclick="location.reload()">Play Again</button>
+            <button class="btn btn-primary" onclick="">Exit</button>
         </div>
-    `;
+   `;
 };
 loadQuestion(index);
