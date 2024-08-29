@@ -1,7 +1,109 @@
 .aboutcard {
-    width: 85%;
+    width: 90%;
     background-color: #ffffff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 15px;
-    margin-left: 7%;
+    margin-left: 4%;
 }
+/* Position the pagination dots at the bottom */
+/* Basic styling for the team section */
+.team-section {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+}
+
+.team-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.team-section p {
+    font-size: 1em;
+    margin-bottom: 40px;
+    color: #777;
+}
+
+.swiper-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 40px;
+}
+
+.swiper-wrapper {
+    display: flex;
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+}
+
+.team-card {
+    text-align: center;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    margin: 0 10px;
+}
+
+.team-card img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.team-card h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.team-card p {
+    font-size: 0.9em;
+    color: #777;
+}
+
+/* Pagination styling */
+.swiper-pagination {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.swiper-pagination-bullet {
+    background-color: #000;
+    opacity: 0.6;
+    margin: 0 5px;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #000;
+    opacity: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .swiper-slide {
+        width: 80%;
+        margin: 0 auto;
+    }
+    .team-card {
+        width: 250px;
+    }
+}
+
+
+
