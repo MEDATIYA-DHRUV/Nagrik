@@ -140,10 +140,15 @@ const quizEnd = () => {
   // console.log(document.getElementsByClassName("container"));
   document.getElementsByClassName("container")[0].innerHTML = `
         <div class="col">
+        <img src="img/logo.svg" width="100px">
             <h3 class="w-100"> Hii, you've scored ${correct} / ${total} </h3>
-            <button class="btn btn-primary" onclick="location.reload()">Play Again</button>
-            <button class="btn btn-primary" onclick="">Exit</button>
+            <button class="btn" onclick="location.reload()">Play Again</button>
+            <button class="btn" onclick="navigateToPage('highscores.html')">Leader Board</button>
         </div>
    `;
 };
 loadQuestion(index);
+
+function navigateToPage(page) {
+  window.location.href = page;
+}
