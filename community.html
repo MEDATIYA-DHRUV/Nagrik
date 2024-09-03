@@ -2,10 +2,263 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Community</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Page</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/community.css">
 </head>
 <body>
-<h2>Community page </h2>
-<img src="img/construction.png">
+<div class="top-bar">
+    <img src="img/law&justice.png" width="100px" alt="ministry">
+    <img src="img/sihlogo.png" width="100px" alt="sihlogo">
+</div>
+<nav class="navbar">
+    <a href="#"> <div class="navbar-logo" onclick="navigateToPage('home.html')">
+        <img src="/img/logo.svg" alt="Logo">
+        <span>Nagrik Aur Samvidhan</span>
+    </div></a>
+    <ul class="navbar-menu">
+        <li class="hover-underline-animation"><a href="home.html" id="navButton">Menu</a></li>
+        <li class="hover-underline-animation"><a href="aboutus.html">About NAS</a></li>
+        <li class="hover-underline-animation"><a href="news.html">News</a></li>
+        <div >
+            <a href="dashboard.html" ><img src="img/hetu.jpg" class="profile-img2" alt="prof"></a>
+        </div>
+    </ul>
+</nav>
+<div class="hover-menu" id="hoverMenu">
+    <div class="menu-section learn-section">
+        <h3>LEARN</h3>
+        <ul>
+            <li onclick="navigateToPage('community.html')" >
+                <a href="#"></a>
+                <img src="img/menu-icon1.svg" class="icon" alt="icon1">
+                <div>
+                    <strong>Community</strong>
+                    <span>Integrate with Community</span>
+                </div>
+            </li>
+            <li onclick="navigateToPage('learn.html')">
+                <img src="img/menu-icon2.svg" class="icon">
+                <div>
+                    <strong>Learning Modules</strong>
+                    <span>All about how to use</span>
+                </div>
+            </li>
+            <li onclick="navigateToPage('learn.html')">
+                <img src="img/menu-icon3.svg" class="icon">
+                <div>
+                    <strong>Learn with fun</strong>
+                    <span>Deep dive into Learning</span>
+                </div>
+            </li>
+            <li onclick="navigateToPage('aboutus.html')">
+                <img src="img/menu-icon4.svg" class="icon">
+                <div>
+                    <strong>Help Center</strong>
+                    <span>Questions and tips from others</span>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="menu-section real-latest-section">
+        <h3>REAL & LATEST</h3>
+        <ul>
+            <li onclick="navigateToPage('constitution.html')">
+                <img src="img/menu-icon21.svg" class="icon">
+                <div>
+                    <strong>The Constitution</strong>
+                    <span>Get the constitution</span>
+                </div>
+            </li>
+            <li onclick="navigateToPage('casestudy.html')">
+                <img src="img/menu-icon22.svg" class="icon">
+                <div>
+                    <strong>Case Studies</strong>
+                    <span>Get Real-time Case studies</span>
+                </div>
+            </li>
+            <li onclick="navigateToPage('expert session.html')">
+                <img src="img/menu-icon23.svg" class="icon">
+                <div>
+                    <strong>Expert Session</strong>
+                    <span>Get hands on expert sessions</span>
+                </div>
+            </li>
+            <li onclick="navigateToPage('updates.html')">
+                <img src="img/menu-icon24.svg" class="icon">
+                <div>
+                    <strong>Latest Updates of Laws</strong>
+                    <span>Discover what's the new rules</span>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="community-container">
+    <aside class="community-sidebar">
+        <button class="community-create-space-btn">+ Create Space</button>
+        <ul class="community-categories">
+            <li>Marvel Comics</li>
+            <li>Music</li>
+            <li>Science</li>
+            <li>Movies</li>
+            <li>Technology</li>
+        </ul>
+    </aside>
+
+    <main class="community-main-content">
+        <section class="community-post-section">
+            <div class="community-post-box">
+                <img src="img/defuser.png" alt="Profile" class="community-profile-pic">
+                <input type="text" placeholder="What do you want to ask or share?" id="postInput" class="community-post-input">
+                <button id="postBtn" class="community-post-btn">Post</button>
+            </div>
+        </section>
+
+        <section class="community-default-posts" id="postsContainer">
+            <!-- Default Post 1 -->
+            <div class="community-post">
+                <div class="community-post-header">
+                    <img src="img/defuser.png" alt="User" class="community-post-profile-pic">
+                    <span class="community-username">Rivai Progs</span>
+                    <span class="community-time-ago">9mo</span>
+                </div>
+                <p class="community-post-text">
+                    This is one of the most candid posts I have come across.
+                </p>
+                <div class="community-comment">
+                    <img src="img/defuser.png" alt="User" class="community-comment-profile-pic">
+                    <div class="community-comment-text">
+                        <p><strong>Shruti Biswas</strong> - 4y</p>
+                        <p>What incident made you realize that your little brother/sister has grown up?</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Default Post 2 -->
+            <div class="community-post">
+                <div class="community-post-header">
+                    <img src="img/defuser.png" alt="User" class="community-post-profile-pic">
+                    <span class="community-username">John Doe</span>
+                    <span class="community-time-ago">1y</span>
+                </div>
+                <p class="community-post-text">
+                    How can I improve my coding skills?
+                </p>
+                <div class="community-comment">
+                    <img src="user4.jpg" alt="User" class="community-comment-profile-pic">
+                    <div class="community-comment-text">
+                        <p><strong>Jane Smith</strong> - 11mo</p>
+                        <p>Practice daily, work on projects, and participate in coding challenges!</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Default Post 3 -->
+            <div class="community-post">
+                <div class="community-post-header">
+                    <img src="img/defuser.png" alt="User" class="community-post-profile-pic">
+                    <span class="community-username">Alice Johnson</span>
+                    <span class="community-time-ago">2w</span>
+                </div>
+                <p class="community-post-text">
+                    What are the best resources to learn data science?
+                </p>
+                <div class="community-comment">
+                    <img src="img/defuser.png" alt="User" class="community-comment-profile-pic">
+                    <div class="community-comment-text">
+                        <p><strong>Michael Lee</strong> - 1w</p>
+                        <p>Check out Coursera, DataCamp, and Kaggle for excellent courses and tutorials!</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Default Post 4 -->
+            <div class="community-post">
+                <div class="community-post-header">
+                    <img src="img/defuser.png" alt="User" class="community-post-profile-pic">
+                    <span class="community-username">David Brown</span>
+                    <span class="community-time-ago">6mo</span>
+                </div>
+                <p class="community-post-text">
+                    What is the most challenging part of being a software engineer?
+                </p>
+                <div class="community-comment">
+                    <img src="img/defuser.png" alt="User" class="community-comment-profile-pic">
+                    <div class="community-comment-text">
+                        <p><strong>Emma White</strong> - 5mo</p>
+                        <p>Staying up-to-date with the latest technologies and continuously learning new skills.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Default Post 5 -->
+            <div class="community-post">
+                <div class="community-post-header">
+                    <img src="img/defuser.png" alt="User" class="community-post-profile-pic">
+                    <span class="community-username">Emily Clark</span>
+                    <span class="community-time-ago">3d</span>
+                </div>
+                <p class="community-post-text">
+                    Can anyone suggest good project ideas for a beginner in web development?
+                </p>
+                <div class="community-comment">
+                    <img src="img/defuser.png" alt="User" class="community-comment-profile-pic">
+                    <div class="community-comment-text">
+                        <p><strong>Lucas Turner</strong> - 2d</p>
+                        <p>Start with building a personal portfolio website or a simple blog platform.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</div>
+<footer>
+    <div class="footer-container">
+        <div class="footer-columns">
+            <div class="footer-column">
+                <h4>About Us</h4>
+                <ul>
+                    <li class="footer-text"><a href="aboutus.html">Our Mission</a></li>
+                    <li class="footer-text"><a href="aboutus.html">Our Team</a></li>
+                    <li class="footer-text"><a href="aboutus.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li class="footer-text"><a href="learn.html">Learn</a></li>
+                    <li class="footer-text"><a href="community.html">Community</a></li>
+                    <li class="footer-text"><a href="news.html">News & Updates</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Stay Connected</h4>
+                <ul>
+                    <li><a href="#" class="social-link"><i class="footer-text"></i> Facebook</a></li>
+                    <li><a href="#" class="social-link"><i class="footer-text"></i> Twitter</a></li>
+                    <li><a href="#" class="social-link"><i class="footer-text"></i> Instagram</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Subscribe to Our Newsletter</h4>
+                <form>
+                    <input type="text" placeholder="Enter your email address">
+                    <button type="submit" class="signup-button">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 Nagrik Aur Samvidhan. All rights reserved.</p>
+        <ul>
+            <li><a href="terms.html">Terms of Use</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+        </ul>
+    </div>
+</footer>
+
+<script src="community.js"></script>
 </body>
 </html>
