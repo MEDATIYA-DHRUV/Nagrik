@@ -55,7 +55,7 @@ navButton.addEventListener('mouseenter', function() {
 
     // Position the menu
     hoverMenu.style.top = rect.bottom + 'px';
-    hoverMenu.style.left = '50%'; // Set to 50% of the viewport width
+    hoverMenu.style.left = '70%'; // Set to 50% of the viewport width
     hoverMenu.style.transform = `translateX(-50%)`; // Center it by shifting it left by 50% of its own width
 
     hoverMenu.style.display = 'flex';

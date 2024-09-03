@@ -8,17 +8,40 @@
 </head>
 <body>
 <div class="top-bar">
-    <img src="img/law&justice.png" width="100px" alt="ministry">
-    <img src="img/sihlogo.png" width="100px" alt="sihlogo">
-</div>
-<nav class="navbar">
     <a href="#"> <div class="navbar-logo" onclick="navigateToPage('home.html')">
         <img src="/img/logo.svg" alt="Logo">
         <span>Nagrik Aur Samvidhan</span>
     </div></a>
+    <img src="img/law&justice.png" width="100px" alt="ministry" style="margin-left: 73%">
+    <img src="img/sihlogo.png" width="100px" alt="sihlogo">
+</div>
+<nav class="navbar">
     <ul class="navbar-menu">
+        <li class="hover-underline-animation"><a href="constitution.html">Constitution</a></li>
+        <li class="hover-underline-animation"><a href="expert.html">Expert Session</a></li>
         <li class="hover-underline-animation"><a href="home.html" id="navButton">Menu</a></li>
-        <li class="hover-underline-animation"><a href="aboutus.html">About NAS</a></li>
+        <li class="custom-dropdown">
+            <a href="javascript:void(0)" class="hover-underline-animation">
+                About NAS
+            </a>
+            <div class="custom-dropdown-content">
+                <a href="aboutus.html#">
+                    <div class="custom-dropdown-text">
+                        <strong>Our Vision</strong>
+                    </div>
+                </a>
+                <a href="aboutus.html#">
+                    <div class="custom-dropdown-text">
+                        <strong>Our Mission</strong>
+                    </div>
+                </a>
+                <a href="aboutus.html#">
+                    <div class="custom-dropdown-text">
+                        <strong>Contact Us</strong>
+                    </div>
+                </a>
+            </div>
+        </li>
         <li class="hover-underline-animation"><a href="news.html">News</a></li>
         <div >
             <a href="dashboard.html" ><img src="img/hetu.jpg" class="profile-img2" alt="prof"></a>
@@ -94,6 +117,7 @@
         </ul>
     </div>
 </div>
+
 
 <div class="logo-box">
     <div class="logo-container">
